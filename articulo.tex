@@ -1,0 +1,149 @@
+
+
+\documentclass[twoside,twocolumn]{article}
+
+\usepackage{blindtext} % Package to generate dummy text throughout this template 
+\usepackage{graphicx}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[english]{babel} % Language hyphenation and typographical rules
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+
+\usepackage{enumitem} % Customized lists
+\setlist[itemize]{noitemsep} % Make itemize lists more compact
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{Sistema para la gestion de Configuración de Software $\bullet$ Octubre 2019 $\bullet$ } % Custom header text
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+\usepackage{titling} % Customizing the title section
+
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\setlength{\droptitle}{-4\baselineskip} % Move the title up
+
+\pretitle{\begin{center}\Huge\bfseries} % Article title formatting
+\posttitle{\end{center}} % Article title closing formatting
+\title{Sistema para la Gestión de Configuración de Software} % Article title
+\author{Sigfredo Aponte, Alonso Andia, Diego Porlles}
+\date{\today} % Leave empty to omit a date
+\renewcommand{\maketitlehookd}{%
+\begin{abstract}
+\noindent 
+El presente documento tiene por función proveer una visión general de la arquitectura del Sistema para la Gestión de Configuración de Software (SGCS), plasmando la idea general del proyecto, objetivos y problematica.
+\end{abstract}
+\begin{abstract}
+\noindent 
+The purpose of this document is to provide an overview of the architecture of the System for Software Configuration Management (SGCS), reflecting the general idea of ​​the project, objectives and problems.
+\end{abstract}
+}
+%----------------------------------------------------------------------------------------
+\begin{document}
+% Print the title
+\maketitle
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+\section{Titulo del Proyecto}
+\lettrine[nindent=0em,lines=3]{S}istema para la Gestion de Configuración de Software.
+
+
+
+%-------------------------------Marco Teórico-----------------
+
+\section{Planteamiento del Problema}
+\subsection{Problema}
+\subsubsection{El Problema}
+Actualmente no se cuenta con un sistema que pueda ser capaz de ver las versiones y los nuevos cambios lo cual causa deficiencia en los diferentes procesos.
+
+\subsubsection{¿A quien Afecta?}
+A los miembros de alguna empresa que se dedique a los proyecto de software y también a los clientes.
+
+\subsubsection{¿Cual es su Impacto?}
+
+	Demora en el proceso de revisar los cambios y nuevas versiones realizados por los miembros del proyecto. 
+\subsubsection{Solución Planteada}
+	Automatizar el proceso de gestión de proyectos que sea capaz de llevar un control apropiado de los mismos y actualice los resultados de avance. 
+
+
+\subsection{Justificación}
+La Justificación principal de este sistema es automatizar y optimizar los procesos de gestión de usuario, gestión de proyecto, generación de las solicitudes de cambio y gestionar las solicitudes de revisión.  De esta manera se pueda llevar un control más rápido de las diferentes actividades de cada miembro de un proyecto.
+
+\subsection{Alcance}
+El sistema SGCS (Sistema de Gestión de Configuración de Software) que se desarrollará se encargará de identificar los ECS y de los cambios que se necesitaran realizar en los proyectos de desarrollo de SW, además de visualizar los informes de estado además de los avances por fase de cada metodología empleada.
+
+%--------------------------------Fin Marco Teórico----------------
+
+%-----------------------------------------------------------------
+\section{Objetivos}\label{sec:5}
+
+\subsection{General}
+El Sistema Gestión de Cambios de Software (SGCS) tiene como objetivo principal automatizar la Gestión de la configuración de un proyecto de software automatizando y reduciendo tiempos, de esta manera agilizar los procesos de los proyectos.
+\subsection{Especifico}
+\begin{itemize}	
+	\item Crear un software que permita la gestión de documentos y las versiones de éste.
+	\item Crear un software que permita la gestión de Usuarios.
+	\item Crear un software que permita mostrar los proyectos y ver su estado.
+	\item Crear un software que permita la generación de solicitud de revisión.
+	\item Crear un software que permita la generación de solicitud de cambio.
+\end{itemize} 
+%-----------------------------------------------------------------
+\section{Referentes Teoricos}
+\begin{itemize}
+	\item Libro1. Diseño e implementación del proceso de gestión de la configuración de software en la empresa de desarrollo venture venti.
+	\item Libro2. Sistema de gestión de la configuración del software y de despliegue para la plataforma PIO
+	\item Libro3. Sistema Evolutivo de Gestión de la configuración del software.
+	\item Libro4. Técnicas Cuantitativas para la Gestión en la Ingeniería del Software.
+	\item Libro5. Gestión de la configuración
+	\item Libro6. Sistema para gestión de configuración de software
+	
+	
+\end{itemize}
+\section{Desarrollo de la Propuesta}
+\subsection{Tecnologia de información }
+\begin{itemize}
+	\item Base de Datos SQL Server.
+	\item Lenguaje de Programación en PHP.
+	\item Arquitectura Modelo Vista Controlador
+	\item HTML, CSS, JavaScript.	
+	
+	
+\end{itemize}
+\subsection{Metodologia, Tecnicas Usadas }
+El grupo para este proyecto vio como mas conveniente utilizar la metodología RUP para la realización del proyecto.
+\section{Cronograma}
+\begin{itemize}
+\item Se adjunta el cronograma en la carpeta del documento por motivos prácticos.
+
+
+\end{itemize}
+
+
+
+
+\end{document}
